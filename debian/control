@@ -1,0 +1,27 @@
+Source: r-cran-r6
+Maintainer: Debian R Packages Maintainers <r-pkg-team@alioth-lists.debian.net>
+Uploaders: Gordon Ball <gordon@chronitis.net>
+Section: gnu-r
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-r,
+               r-base-dev
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/r-pkg-team/r-cran-r6
+Vcs-Git: https://salsa.debian.org/r-pkg-team/r-cran-r6.git
+Homepage: https://cran.r-project.org/package=R6
+Rules-Requires-Root: no
+
+Package: r-cran-r6
+Architecture: all
+Depends: ${R:Depends},
+         ${misc:Depends}
+Recommends: ${R:Recommends}
+Suggests: ${R:Suggests}
+Description: R classes with reference semantics
+ The R6 package allows the creation of classes with reference semantics,
+ similar to R's built-in reference classes. Compared to reference classes,
+ R6 classes are simpler and lighter-weight, and they are not built on S4
+ classes so they do not require the methods package. These classes allow
+ public and private members, and they support inheritance, even when the
+ classes are defined in different packages.
